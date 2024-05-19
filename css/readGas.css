@@ -1,0 +1,55 @@
+.enter-reading {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  gap: 12.38rem;
+  justify-content: center;
+  align-items: center;
+}
+.enter-reading .reading-inputs {
+  margin-top: 6rem;
+  width: 26.375rem;
+  height: 18.0625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.enter-reading .reading-inputs label {
+  color: var(--pcolor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.enter-reading .reading-inputs input:disabled {
+  background-color: rgb(179, 179, 179);
+}
+.enter-reading .reading-inputs input[type=file] {
+  font-size: 23px;
+  padding-bottom: 2rem;
+  border: none;
+}
+.enter-reading .reading-inputs input {
+  font-size: 1.5rem;
+  width: 16.375rem;
+  /* height: 4.8125rem; */
+  border: 2px solid #000;
+  /* background: #FFF; */
+}
+.enter-reading .reading-inputs button {
+  margin-top: 2.25rem;
+  width: 18.125rem;
+  height: 3.4375rem;
+  padding: 0rem 3.125rem 0rem 3.1875rem;
+  border-radius: 2.1875rem;
+  background: var(--pcolor);
+  color: var(--scolor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: 0.4s;
+}
+.enter-reading .reading-inputs button:hover {
+  background: var(--scolor);
+  color: var(--pcolor);
+}

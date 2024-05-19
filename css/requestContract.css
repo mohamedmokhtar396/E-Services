@@ -1,0 +1,73 @@
+.allRequestInputs {
+  margin-top: 6rem;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.allRequestInputs .form1 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.56rem;
+  align-items: center;
+  justify-content: center;
+}
+.allRequestInputs .form1 .single-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39.9375rem;
+  color: var(--pcolor);
+  /* gap: 2.3125rem; */
+}
+.allRequestInputs .form1 .single-input input {
+  width: 20.375rem;
+  height: 2.8125rem;
+  border: 2px solid #000;
+  font-size: 1.5rem;
+}
+.allRequestInputs .form1 .single-input input::placeholder {
+  font-size: 18px;
+  padding-right: 5px;
+}
+.allRequestInputs .form1 .single-input label {
+  width: 10.5rem;
+  height: 2.75rem;
+  color: var(--pcolor);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.allRequestInputs .form1 .single-input select {
+  width: 20.375rem;
+  height: 2.8125rem;
+  border: 2px solid #000;
+  font-size: 1.5rem;
+}
+.allRequestInputs .form1 .single-input select option {
+  font-size: 1.5rem;
+}
+
+/* button */
+#send-request {
+  margin-top: 4.25rem;
+  width: 18.125rem;
+  height: 3.4375rem;
+  padding: 0rem 3.125rem 0rem 3.1875rem;
+  border-radius: 2.1875rem;
+  background: var(--pcolor);
+  color: var(--scolor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: 0.4s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+#send-request:hover {
+  background: var(--scolor);
+  color: var(--pcolor);
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>طلب تعاقد عداد المياة</title>
+    <link rel="stylesheet" href="../css/nav-services-page.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/requestContract.css" />
+  </head>
+  <body>
+    <div class="nav-services-pages">
+      <a href="./WATER.html"
+        ><img src="../images/icons/🦆 icon _share_.svg" alt=""
+      /></a>
+
+      <h1>طلب تعاقد عداد المياة</h1>
+      <a href="./home.html"
+        ><img src="../images/icons/🦆 icon _home_.svg" alt=""
+      /></a>
+    </div>
+
+    <!-- inputs -->
+    <div class="allRequestInputs">
+
+      <div class="form1">
+        <div class="single-input">
+          <label>الأسم : </label>
+          <input type="text" id="name" />
+        </div>
+        <div class="single-input">
+          <label>العنوان : </label>
+          <input type="text" id="address"/>
+        </div>
+        <div class="single-input">
+          <label>اثبات شخصية :</label>
+          <select id="identity-type">
+            <option value=""></option>
+            <option value="رقم قومى">رقم قومى</option>
+            <option value="جواز سفر">جواز سفر</option>
+            <option value="رخصة قيادة">رخصة قيادة</option>
+            <option value="بطاقة عسكرية">بطاقة عسكرية</option>
+          </select>
+        </div>
+        <div class="single-input">
+          <label>ارفق صورة او ملف :</label>
+          <input class="fileInput" type="file" name="file" id="fileInput">
+        </div>
+      </div>
+      <div class="form1">
+        <!-- <div class="single-input">
+          <label> المنطقة : </label>
+          <input type="text" id="city" />
+        </div> -->
+        <div class="single-input">
+          <label>نوع العقار : </label>
+          <select id="building-type">
+            <option value=""></option>
+            <option value="شقة">شقة</option>
+            <option value="فيلا">فيلا</option>
+            <option value="محل تجارى">محل تجارى</option>
+            <option value="أخرى">أخرى</option>
+          </select>
+        </div>
+        <div class="single-input">
+          <label>رقم الهاتف : </label>
+          <input type="number" id="phone"/>
+        </div>
+
+        <div class="single-input">
+          <label> رقم اثبات الشخصية : </label>
+          <input type="number" id="authNumber"/>
+        </div>
+      </div>
+    </div>
+    <a href="#"><button id="send-request">إرسال الطلب</button></a>
+    
+
+    <div class="popup" id="popup"></div>
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/WATER_requestContract.js"></script>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+</html>

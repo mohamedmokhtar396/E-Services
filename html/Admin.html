@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-Dashboard</title>
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/Admin.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="logo">
+        <img src="../images/logo-removebg-preview.png" alt="" />
+        <h1>خدمات الكترونية</h1>
+      </div>
+      <ul>
+        <li><a href="./home.html">الرئيسية</a></li>
+        <li class="sub-nav">
+          الإرشادات
+          <i class="fas fa-angle-down"></i>
+          <ul>
+            <a href="./gas.html"><li>غاز</li></a>
+            <a href="./ELEC.html"><li>كهرباء</li></a>
+            <a href="./WATER.html"><li>مياة</li></a>
+          </ul>
+        </li>
+
+        <li class="sub-nav">
+          التعاقد
+          <i class="fas fa-angle-down"></i>
+          <ul>
+            <a href="./requestContract.html"><li>غاز</li></a>
+            <a href="./ELEC_requestContract.html"><li>كهرباء</li></a>
+            <a href="./WATER_requestContract.html"><li>مياة</li></a>
+          </ul>
+        </li>
+        <li class="sub-nav">
+          المساعدة
+          <i class="fas fa-angle-down"></i>
+          <ul>
+            <a href="./contact.html"
+              ><li style="margin-bottom: 0.5rem">للشكاوي</li></a
+            >
+            <a
+              style="color: var(--scolor); font-size: 14px"
+              href="#"
+              >اتصل بنا</a
+            >
+            <a href="#"><li>19700</li></a>
+          </ul>
+        </li>
+
+        <li class="active" style="margin-right: 3rem"><a href="./Admin.html">موظف</a></li>
+      </ul>
+
+      <div class="buttons">
+        <a href="./login.html"><button id="login">تسجيل الدخول</button></a>
+        <a href="./login.html"><button id="logout">تسجيل الخروج</button></a>
+      </div>
+    </nav>
+
+
+
+    <!-- ******************************* -->
+    <!-- ******************************* -->
+    <!-- ******************************* -->
+
+    <div class="choose-board">
+      <ul>
+        <li>
+          غاز
+           <i class="fas fa-angle-down"></i>
+          <ul class="board-subNav">
+            <li id="gas_read">القراءة</li>
+            <li id="gas_contract">التعاقد</li>
+            <li id="gas_service">الصيانة</li>
+            <li id="gas_cancelContract">الغاء تعاقد</li>
+          </ul>
+        </li>
+        <li>
+          كهرباء
+           <i class="fas fa-angle-down"></i>
+          <ul class="board-subNav">
+            <li id="elec_read">القراءة</li>
+            <li id="elec_contract">التعاقد</li>
+            <li id="elec_service">الصيانة</li>
+            <li id="elec_cancelContract">الغاء تعاقد</li>
+          </ul>
+        </li>
+        <li>
+          مياة
+           <i class="fas fa-angle-down"></i>
+          <ul class="board-subNav">
+            <li id="water_read">القراءة</li>
+            <li id="water_contract">التعاقد</li>
+            <li id="water_service">الصيانة</li>
+            <li id="water_cancelContract">الغاء تعاقد</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ********* -->
+    <div class="board-content">
+      
+    </div>
+    <!-- <button onclick="test()">adasdsa</button> -->
+    
+    
+    <div class="popup" id="popup"></div>
+
+    
+    <script src="../js/checkLogIn.js"></script>
+    <script type="module" src="../js/firebase.js" defer></script>
+    <script type="module" src="../js/Admin.js" defer></script>
+  </body>
+</html>

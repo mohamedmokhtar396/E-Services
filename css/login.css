@@ -1,0 +1,33 @@
+.signup-form form {
+  height: 18rem;
+}
+.signup-form form {
+  justify-content: center;
+}
+.signup-form {
+  width: 40.0625rem;
+  height: 37.13331rem;
+  padding-top: 3.44rem;
+  border-radius: 34px;
+  background-color: rgb(255 255 255 / 34%);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.signup-form form input {
+  direction: ltr;
+  text-align: left;
+}
+.new-user {
+  color: var(--scolor);
+  font-size: 1.375rem;
+  font-weight: 800;
+  border-bottom: 0.02rem solid var(--scolor);
+  transition: 0.5s;
+}
+.new-user:hover {
+  color: var(--pcolor);
+}

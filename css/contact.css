@@ -1,0 +1,86 @@
+
+.sub-nav ul a {
+  width: auto;
+  padding-inline: 1rem;
+}
+  
+  /* *************************************************************************************************/
+  .feed-back
+  {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.feed-back input,textarea{
+    width: 30%;
+}
+.feed-back h1{
+    color: var(--pcolor);
+    font-weight: 700;
+}
+.feed-back button,a
+{
+
+    color: var(--scolor);
+    text-decoration: none;
+    height: 50px;
+    width: 150px;
+    
+}
+
+.feed-back input[type="submit"],button{
+    height: 50px;
+    width: 100px;
+    border: 1px solid var(--pcolor);
+    border-radius: 25px 0;
+    overflow: hidden;
+    background-color: transparent;
+    font-size: x-large;
+    font-weight: 700;
+    color: var(--scolor);
+    background-color: var(--pcolor);
+}
+.feed-back input[type="submit"]:hover,button:hover {
+    transition: all 0.3s;
+    background-color: var(--scolor);
+    color: var(--pcolor);
+    border: none;
+}
+.feed-back button:hover a{
+    color: var(--pcolor);
+    
+}
+
+
+/* ************************************************************************************ */
+.feed-back-log{
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.feed-back-log-content{
+    padding: 2rem;
+    border: 1px solid var(--pcolor);
+    width: 30%;
+    text-align: center;
+    transition: 0.5s;
+    overflow: auto;
+}
+
+.feed-back-log-content:hover{
+    transform: scale(1.3,1.3);
+    color: var(--scolor);
+    background-color: var(--pcolor);
+}
+/* .feed-back-log-content:hover h3{
+  color: var(--scolor);
+
+} */

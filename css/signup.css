@@ -1,0 +1,196 @@
+.bg {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+}
+.bg-ol {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #ffffff9a 12.51%, #022b3aa4 100%);
+  overflow: hidden;
+}
+
+/* *********************************** */
+/* *********************************** */
+/* *********************************** */
+/* *********************************** */
+
+nav {
+  display: flex;
+  /* width: 86rem; */
+  position: relative;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3.37rem;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1.88rem;
+  list-style: none;
+}
+nav ul li {
+  /* color: var(--scolor); */
+  /* font-family: "cairo"; */
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: 0.3s;
+}
+
+nav ul li:hover {
+  font-weight: 700;
+  border-bottom: 5px solid #0d363b;
+}
+nav .buttons button {
+  color: var(--pcolor);
+  font-size: 24px;
+  font-weight: 900;
+  width: 196px;
+  height: 49px;
+  border: none;
+  border-radius: 2.5rem;
+  background-color: var(--scolor);
+  cursor: pointer;
+  transition: 0.4s;
+}
+nav .buttons button a {
+  color: var(--pcolor);
+}
+nav .buttons button:hover {
+  background-color: var(--pcolor);
+  color: var(--scolor);
+}
+nav .buttons button:hover a {
+  color: var(--scolor);
+}
+nav::after {
+  content: "";
+  position: absolute;
+  left: 3.37rem;
+  bottom: -1rem;
+  /* width: calc(100% - 12.74rem); */
+  width: 88.4375rem;
+  height: 0.1875rem;
+  background-color: var(--pcolor);
+}
+
+.logo {
+  width: 30%;
+  /* background-color: red; */
+  /* overflow: hidden; */
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.logo h1 {
+  /* width: 75%; */
+  color: var(--pcolor);
+  font-size: 45px;
+  font-weight: 800;
+}
+.logo img {
+  width: 45%;
+  height: 88px;
+  object-fit: cover;
+  position: absolute;
+  right: -5rem;
+  top: 1rem;
+}
+
+/* *********************************** */
+/* *********************************** */
+/* *********************************** */
+.signup-form-parent {
+  width: 100%;
+  height: 42.13331rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+.signup-form {
+  width: 40.0625rem;
+  height: 37.13331rem;
+  border-radius: 34px;
+  background-color: rgb(255 255 255 / 34%);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.signup-form h1 {
+  color: var(--pcolor);
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  width: 20.3125rem;
+  height: 2.625rem;
+}
+.signup-form button {
+  width: 12.25rem;
+  height: 3.03306rem;
+  border-radius: 1.875rem;
+  background: var(--pcolor);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.signup-form button a {
+  color: var(--scolor);
+}
+.signup-form button:hover {
+  background: var(--scolor);
+}
+.signup-form button:hover a {
+  color: var(--pcolor);
+}
+
+.signup-form form {
+  width: 26rem;
+  height: 27.30344rem;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  color: var(--pcolor);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+form input {
+  direction: ltr;
+  width: 25rem;
+  height: 2.52294rem;
+  border-radius: 0.3125rem;
+  background: #fff;
+  border: none;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  padding-inline: 0.3rem;
+}
+form input::placeholder {
+  padding-left: 10px;
+  text-align: left;
+  color: #bcbec0;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+form input:focus {
+  border: none;
+}

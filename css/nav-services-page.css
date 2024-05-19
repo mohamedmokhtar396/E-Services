@@ -1,0 +1,22 @@
+.nav-services-pages {
+  /* margin-top: 3.96rem; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17rem;
+}
+.nav-services-pages img {
+  width: 3.71431rem;
+  height: 2.875rem;
+  transition: 0.4s;
+}
+.nav-services-pages a:hover img {
+  transform: scale(0.8, 0.8);
+}
+.nav-services-pages h1 {
+  color: var(--pcolor);
+  font-size: 2.125rem;
+  font-weight: 700;
+  border-bottom: 3px solid var(--pcolor);
+}

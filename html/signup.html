@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <img src="../images/bg/water.jpg" alt="" />
+    </div>
+
+    <div class="bg-ol">
+      <nav id="nav">
+        <div class="logo">
+          <img src="../images/logo-removebg-preview.png" alt="" />
+          <h1>خدمات الكترونية</h1>
+        </div>
+  
+
+        <div class="buttons">
+          <button><a href="./login.html">تسجيل الدخول</a></button>
+        </div>
+      </nav>
+      <!-- ************************* -->
+      <!-- ************************* -->
+      <!-- ************************* -->
+
+      <div class="signup-form-parent">
+        <div class="signup-form">
+          <h1>إنشاء مستخدم جديد</h1>
+          <form>
+            <label>الأسم</label>
+            <input type="text" name="name" id="name" placeholder="@example" />
+            <p style="color: red"></p>
+            <!-- <br> -->
+            <label> رقم الهاتف</label>
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder="2010000000000+"
+            />
+            <p style="color: red"></p>
+            <!-- <br> -->
+            <label>البريد الالكترونى </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="username@gmail.com"
+            />
+            <p style="color: red"></p>
+            <!-- <br> -->
+
+            <label>كلمة السر</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <p style="color: red"></p>
+            <!-- <br> -->
+
+            <label>تأكيد كلمة السر</label>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Confirm Password"
+            />
+            <p style="color: red"></p>
+          </form>
+          <button id="submit"><a href="#">إنشاء حساب</a></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup"></div>
+
+    <!-- <script src="../js/signup.js"></script> -->
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/signup.js"></script>
+    
+  </body>
+</html>

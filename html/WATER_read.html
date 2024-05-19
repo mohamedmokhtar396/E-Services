@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قراءة العداد</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/nav-services-page.css" />
+    <link rel="stylesheet" href="../css/readGas.css" />
+  </head>
+  <body>
+    <div class="nav-services-pages">
+      <a href="./WATER.html"
+        ><img src="../images/icons/🦆 icon _share_.svg" alt=""
+      /></a>
+
+      <h1>فواتير المياة وإدخال قراءة العداد</h1>
+      <a href="./home.html"
+        ><img src="../images/icons/🦆 icon _home_.svg" alt=""
+      /></a>
+    </div>
+
+    <p
+      style="
+        color: #f00;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2rem;
+      "
+    >
+      تنويه: عميلنا العزيز القراءة من يوم 1 الى يوم 27 من كل شهر و يمكن سداد
+      الفاتورة ابتداء من يوم 1 الى نهاية الشهر
+    </p>
+
+    <div class="enter-reading">
+      <div class="reading-inputs">
+        <label for="">اسم العميل</label>
+        <input type="text" id="name" disabled/>
+        <label for="">العنوان</label>
+        <input type="text" id="address"/>
+        <label for="">رقم الهاتف</label>
+        <input type="number" id="phone" disabled/>
+        <label for=""> القراءة السابقة</label>
+        <input type="text" id="last_reading" disabled/>
+        <label for=""> القراءة الحالية</label>
+        <input type="number" id="reading" />
+        <label for=""> ارفق صوره</label>
+        <input type="file" id="fileInput" />
+
+        <a href="#"><button id="submit">ارسال</button></a>
+      </div>
+      <img style="width: 30.6875rem; height: 20.6875rem;" src="../images/water/water-meter.jpg" alt="" />
+    </div>
+
+    <div class="popup" id="popup"></div>
+
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/WATER_readGas.js"></script>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <img src="../images/bg/wallpaperflare.com_wallpaper (3).jpg" alt="" />
+    </div>
+
+    <div class="bg-ol">
+      <nav id="nav">
+        <div class="logo">
+          <img src="../images/logo-removebg-preview.png" alt="" />
+          <h1>خدمات الكترونية</h1>
+        </div>
+
+        <div class="buttons">
+          <button><a href="./signup.html">إنشاء حساب</a></button>
+        </div>
+      </nav>
+      <!-- ************************* -->
+      <!-- ************************* -->
+      <!-- ************************* -->
+
+      <div class="signup-form-parent">
+        <div class="signup-form">
+          <h1>تسجيل الدخول</h1>
+          <form>
+            <label>البريد الالكترونى</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="username@gmail.com"
+            />
+            <p style="color: red"></p>
+            <!-- <br> -->
+
+            <label>كلمة السر</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+            />
+            <p style="color: red"></p>
+            <a
+              href="./forgot-password.html"
+              style="
+                color: var(--pcolor);
+                font-size: 0.75rem;
+                font-weight: 500;
+                text-decoration: underline;
+                cursor: pointer;
+              "
+              >هل نسيت كلمة السر؟</a
+            >
+            <!-- <br> -->
+          </form>
+          <button id="submit"><a href="#">تسجيل الدخول</a></button>
+          <a href="./signup.html" class="new-user">مستخدم جديد؟إنشاء حساب</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup"></div>
+
+    <!-- <script src="../js/login.js"></script> -->
+
+    <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/login.js"></script>
+  
+  </body>
+</html>
