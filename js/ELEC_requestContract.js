@@ -129,7 +129,7 @@ async function AddData() {
                 document.getElementById("popup").innerHTML = "تم ارسال طلبك بنجاح";
                 setTimeout(() => {
                     document.getElementById("popup").style.visibility = "hidden";
-                    // window.location.href = "./ELEC.html";
+                    window.location.href = "./ELEC.html";
                 }, 2000);
             }
         } catch (error) {
