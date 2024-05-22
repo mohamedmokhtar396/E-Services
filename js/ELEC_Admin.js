@@ -187,7 +187,7 @@ elec_contract.addEventListener('click', async function() {
           <p>رقم اثبات الشخصية : ${elecContractData[i].authNumber}</p>
           <p>العنوان : ${elecContractData[i].customerAddress}</p>
           <p>نوع العقار : ${elecContractData[i].homeType}</p>
-          <a href="${elecContractData[i].fileInput}" target="_blank">الملف او الصوره</a>
+          <a href="${elecContractData[i].imageReceipt}" target="_blank">الملف او الصوره</a>
           <br />
           <button class="elecContractBtn1" style='background-color:var(--pcolor);color:var(--scolor); width:40px; height:30px;' data-id="${elecContractData[i].id}">قبول</button>
           <button class="elecContractBtn" style='background-color:var(--pcolor);color:var(--scolor); width:40px;  height:30px;' data-id="${elecContractData[i].id}">رفض</button>
@@ -240,6 +240,8 @@ async function elecContractDone(docId) {
 
     
 }
+
+
 
 // elec cancel contract
 export function ELEC_cancelContract(){

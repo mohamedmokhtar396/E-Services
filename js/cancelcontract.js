@@ -1,3 +1,4 @@
+// الغاء تعاقد غاز
 // ***************************************
 // ***************************************
 // **************FireBase*****************
@@ -5,15 +6,8 @@
 // ***************************************
 
 import { app } from "./firebase.js";
-import {
-  getDatabase,
-  get,
-  set,
-  ref,
-  child,
-} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
-
-const database = getDatabase(app);
+import { getFirestore, doc, setDoc, getDocs, query, collection, where } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+const db = getFirestore(app);
 
 // ***************************************
 // ***************************************
@@ -27,18 +21,16 @@ let buildingType = document.getElementById("building-type");
 let city = document.getElementById("city");
 let reason = document.getElementById("reason");
 
-
 let phone = document.getElementById("phone");
-let memberNo = document.getElementById("memberNo");
-let authNumber = document.getElementById("authNumber");
+let meterNo = document.getElementById("meterNo");
+let meterReading = document.getElementById("meterReading");
 let submit = document.getElementById("send-request");
-
 
 var inputs = document.querySelectorAll("input:not([type=submit])");
 var selection = document.querySelectorAll("select");
-console.log(selection);
 var checkInputs, checkSelection;
-submit.addEventListener("click", function (e) {
+
+submit.addEventListener("click", async (e) => {
   for (var i = 0; i < inputs.length; i++) {
     var emptyfield = inputs[i];
     if (inputs[i].value == "") {
@@ -66,55 +58,51 @@ submit.addEventListener("click", function (e) {
     }
   }
 
-  if (checkInputs == true && checkSelection == true && memberNo.value!=0) {
-    AddData();
+  if (checkInputs == true && checkSelection == true && meterNo.value != 0) {
+    await AddData();
   }
 });
 
-
-
-function AddData() {
-  const dbRef = ref(database);
+async function AddData() {
   if (phone.value != 0) {
-    get(child(dbRef, "Gas__cancelContract/" + phone.value)).then((snapshot) => {
-      if (snapshot.exists()) {
+    const q = query(collection(db, "removeGasMeter"), where("customerMobile", "==", phone.value));
+
+    try {
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
         document.getElementById("popup").style.backgroundColor = "#e55555";
         document.getElementById("popup").style.visibility = "visible";
-        document.getElementById("popup").innerHTML =
-          "تم التسجيل مسبقا علي نفس الرقم";
+        document.getElementById("popup").innerHTML = "تم التسجيل مسبقا علي نفس الرقم";
         setTimeout(() => {
           document.getElementById("popup").style.visibility = "hidden";
         }, 3000);
       } else {
-        set(ref(database, "Gas__cancelContract/" + phone.value), {
-          name: name.value,
+        await setDoc(doc(collection(db, "removeGasMeter")), {
+          customerName: name.value,
           // serviceType: serviceType.value,
-          buildingType: buildingType.value,
-          city: city.value,
+          HomeType: buildingType.value,
+          customerAddress: city.value,
           reason: reason.value,
-          phone: phone.value,
-          memberNo: memberNo.value,
-          authNumber: authNumber.value,
-      
-        })
-          .then(() => {
-            document.getElementById("popup").style.backgroundColor = "#74e555";
-            document.getElementById("popup").style.visibility = "visible";
-            document.getElementById("popup").innerHTML = "تم ارسال طلبك بنجاح";
-            setTimeout(() => {
-              document.getElementById("popup").style.visibility = "hidden";
-              window.location.href = "./gas.html";
-            }, 2000);
-          })
-          .catch((error) => {
-            document.getElementById("popup").style.backgroundColor = "#e55555";
-            document.getElementById("popup").style.visibility = "visible";
-            document.getElementById("popup").innerHTML = error.message;
-            setTimeout(() => {
-              document.getElementById("popup").style.visibility = "hidden";
-            }, 3000);
-          });
+          customerMobile: phone.value,
+          meterNumber: meterNo.value,
+          nowReadingMeter: meterReading.value,
+        });
+
+        document.getElementById("popup").style.backgroundColor = "#74e555";
+        document.getElementById("popup").style.visibility = "visible";
+        document.getElementById("popup").innerHTML = "تم ارسال طلبك بنجاح";
+        setTimeout(() => {
+          document.getElementById("popup").style.visibility = "hidden";
+          window.location.href = "./gas.html";
+        }, 2000);
       }
-    });
-  } 
+    } catch (error) {
+      document.getElementById("popup").style.backgroundColor = "#e55555";
+      document.getElementById("popup").style.visibility = "visible";
+      document.getElementById("popup").innerHTML = error.message;
+      setTimeout(() => {
+        document.getElementById("popup").style.visibility = "hidden";
+      }, 3000);
+    }
+  }
 }

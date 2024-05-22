@@ -107,6 +107,8 @@ async function AddData() {
           customerAddress: address.value,
           homeType: buildingType.value,
           identityType: identityType.value,
+          idImage: fileUrl,
+          imageContract: fileUrl,
           imageReceipt: fileUrl,
           customerMobile: phone.value,
           authNumber: authNumber.value,

@@ -81,23 +81,6 @@ const database = getDatabase(app);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var inputs = document.querySelectorAll("input:not([type=submit])");
 var logInBtn = document.getElementById("submit");
 var email = document.getElementById("email");
@@ -118,39 +101,7 @@ logInBtn.addEventListener("click", function (e) {
     }
   }
 
-  // for (var i = 0; i < data.length; i++) {
-  //   if (
-  //     email.value != "" &&
-  //     (data[i].email == email.value || data[i].phone == email.value)
-  //   ) {
-  //     email.nextElementSibling.innerHTML = "";
-  //   } else {
-  //     email.nextElementSibling.innerHTML = "غير صحيح";
-  //     error = true;
-  //   }
 
-  //   if (password.value != "" && data[i].password == password.value) {
-  //     password.nextElementSibling.innerHTML = "";
-  //     error = false;
-  //   } else {
-  //     password.nextElementSibling.innerHTML = `كلمه سر غير صحيحه`;
-  //     error = true;
-  //   }
-
-  //   if (!error) {
-  //     var userLoggedin = JSON.parse(localStorage.getItem("userLoggedIn")) || [];
-  //     var userLogedIn = {
-  //       name: data[i].name,
-  //       email: data[i].email,
-  //       password: data[i].password,
-  //       loggedIn: true,
-  //     };
-
-  //     userLoggedin.push(userLogedIn);
-  //     localStorage.setItem("userLoggedIn", JSON.stringify(userLoggedin));
-  //     console.log(userLogedIn);
-  //   }
-  // }
 
   if (error) {
     e.preventDefault();
