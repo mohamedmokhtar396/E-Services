@@ -80,7 +80,7 @@ async function AddData() {
         await setDoc(doc(collection(db, "removeGasMeter")), {
           customerName: name.value,
           // serviceType: serviceType.value,
-          HomeType: buildingType.value,
+          homeType: buildingType.value,
           customerAddress: city.value,
           reason: reason.value,
           customerMobile: phone.value,
