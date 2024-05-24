@@ -64,36 +64,35 @@ submitBtn.addEventListener("click", async function() {
 
 
 
-function displayAllFeeds() {
 
-  const dbRef=ref(database)
- 
-  let cfeeds = ``;
-  let feeds = []
-    get(child(dbRef,"Customers_Feeds/"))
-    .then((snapshot)=>{
-      
+async function displayAllFeeds() {
+  let cfeeds = '';
+  let feeds = [];
 
-      snapshot.forEach((childsnapshot)=>{
-        feeds.push(childsnapshot.val())
-      })
+  try {
+    const querySnapshot = await getDocs(collection(db, "complaintsList"));
+    querySnapshot.forEach((doc) => {
+      feeds.push(doc.data());
+    });
 
-      for (let i = 0; i < feeds.length; i++) {
-        fId=feeds[feeds.length-1].fId+1
-        cfeeds += `
-        <div class="feed-back-log-content">
-        <h3 >${feeds[i].uname}</h3>
-        <h4 id="customerFeedNo">${feeds[i].phone}</h4>
-        <p>${feeds[i].tarea}</p>
-        </div>
-        `;
-      }
-      document.getElementById("feeds").innerHTML = cfeeds;
-    })
-    
-    
+    for (let i = 0; i < feeds.length; i++) {
+      cfeeds += `
+      <div class="feed-back-log-content">
+        <h3>${feeds[i].customerName}</h3>
+        <h4 id="customerFeedNo">${feeds[i].customerMobile}</h4>
+        <p>${feeds[i].reason}</p>
+      </div>
+      `;
+    }
+
+    document.getElementById("feeds").innerHTML = cfeeds;
+  } catch (error) {
+    console.error("Error getting documents: ", error);
+  }
 }
-displayAllFeeds()
+
+displayAllFeeds();
+
 
 // let check=JSON.parse(localStorage.getItem("userLoggedIn"))
 // console.log(check)

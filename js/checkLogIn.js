@@ -29,6 +29,8 @@ if (
   checkLoggedIn.admin == "khaled.zakaria4@icloud.com" 
 ) {
   document.getElementById("admin").style.display = "block";
+  document.getElementById("allFeeds").style.display = "block";
 }else{
   document.getElementById("admin").style.display = "none";
+  document.getElementById("allFeeds").style.display = "none";
 }
